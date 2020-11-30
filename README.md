@@ -1,4 +1,4 @@
-# Graphana Dashboard for Salut/Dades COVID
+# Grafana Dashboard for Salut/Dades COVID
 
 The Catalonia Government (Generalitat de Catalunya) [publishes](https://dadescovid.cat) COVID-19 data in a regular basis. This repository provides a Docker service (orchestrated with [Docker Compose](https://docs.docker.com/compose/)) that automates the download of the data feeding a Grafana dashboard with some metrics:
 
