@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  feed:
+    build: .
+    depends_on:
+      - graphite
+    links:
+      - graphite
+  grafana:
+    image: grafana/grafana
+    links:
+      - graphite
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./provisioning/:/etc/grafana/provisioning/
+  graphite:
+    image: graphiteapp/graphite-statsd
+    expose:
+      - "2003"
+      - "80"
